@@ -7,6 +7,9 @@
 # Fingerprint
 TARGET_HAS_UDFPS := true
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/fts_ts.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/fts_ts.idc
+
 # Inherit from sm8250-common
 $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
 
