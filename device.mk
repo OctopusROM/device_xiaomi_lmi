@@ -13,6 +13,10 @@ PRODUCT_COPY_FILES += \
 # Inherit from sm8250-common
 $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
 
+# Axion kernel manager
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/axion/ax_kernel_manager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ax_kernel_manager.xml
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi

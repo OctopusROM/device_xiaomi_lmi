@@ -4,9 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Axion device-specific configuration
-AXION_KERNEL_MANAGER_CONFIG := device/xiaomi/lmi/configs/axion/ax_kernel_manager.xml
-
 # Inherit from sm8250-common
 include device/xiaomi/sm8250-common/BoardConfigCommon.mk
 
