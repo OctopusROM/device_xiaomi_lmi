@@ -31,4 +31,7 @@
 
     <!-- The radius of the enrollment progress bar, in dp -->
     <integer name="config_udfpsEnrollProgressBar" translatable="false">106</integer>
+
+    <!-- Goodix reports a finger on the sensor with vendor acquired code 22. -->
+    <integer name="config_udfpsVendorCode">22</integer>
 </resources>
