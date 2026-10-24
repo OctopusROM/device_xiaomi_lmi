@@ -32,3 +32,4 @@ ro.hardware.audio.primary=lmi
 persist.vendor.fingerprint.sensor_location=540|1756|101
 persist.vendor.fingerprint.type=udfps_optical
 persist.vendor.fingerprint.udfps.control_illumination=true
+persist.vendor.fingerprint.udfps.vendor_acquired_code=22
