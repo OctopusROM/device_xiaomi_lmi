@@ -30,6 +30,8 @@ TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
 # Camera
+$(call inherit-product, $(LOCAL_PATH)/miuicamera.mk)
+
 PRODUCT_PACKAGES += \
     libMegviiFacepp-0.5.2 \
     libmegface \

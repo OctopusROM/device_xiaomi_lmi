@@ -9,6 +9,14 @@ include device/xiaomi/sm8250-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/xiaomi/lmi
 
+# MIUI Camera's legacy vendor makefile installs its prebuilt ELF files directly.
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
+# Camera policy. Keep the common tree's property labels instead of the legacy ones.
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += vendor/xiaomi/lmi-miuicamera/sepolicy/public
+BOARD_VENDOR_SEPOLICY_DIRS += vendor/xiaomi/lmi-miuicamera/sepolicy/vendor
+
 # Display
 TARGET_SCREEN_DENSITY := 440
 
