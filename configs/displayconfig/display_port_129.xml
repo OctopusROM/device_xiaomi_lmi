@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2026 The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<displayConfiguration>
+    <name>lmi</name>
+    <!--
+        HDR uses the existing brightness calibration from the framework overlay.
+        Keep sunlight HBM disabled: no extended panel brightness is calibrated.
+        The HDR target below is clipped to the existing backlight range, and the
+        framework reports the resulting luminance ratio rather than this target.
+    -->
+    <highBrightnessMode enabled="false">
+        <transitionPoint>0</transitionPoint>
+        <minimumLux>0</minimumLux>
+        <timing>
+            <timeWindowSecs>0</timeWindowSecs>
+            <timeMaxSecs>0</timeMaxSecs>
+            <timeMinSecs>0</timeMinSecs>
+        </timing>
+        <allowInLowPowerMode>false</allowInLowPowerMode>
+        <minimumHdrPercentOfScreen>0.2</minimumHdrPercentOfScreen>
+        <sdrHdrRatioMap>
+            <point>
+                <sdrNits>0</sdrNits>
+                <hdrRatio>2</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>427.6287</sdrNits>
+                <hdrRatio>2</hdrRatio>
+            </point>
+        </sdrHdrRatioMap>
+    </highBrightnessMode>
+</displayConfiguration>

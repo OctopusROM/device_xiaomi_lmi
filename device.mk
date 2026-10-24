@@ -42,6 +42,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.motor@1.0.vendor
 
+# Display configuration
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/displayconfig/display_port_129.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_port_129.xml
+
 # Init
 $(call soong_config_set,xiaomi_kona,variant_lib,//$(LOCAL_PATH):libvariant_xiaomi_lmi)
 
