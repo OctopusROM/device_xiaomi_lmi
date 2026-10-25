@@ -32,12 +32,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.lens.oem_camera_package=com.android.camera
 
+# Use the camera's built-in consent dialog instead of MIUI Security Center.
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.camera.privapp.list=com.android.camera \
-    ro.hardware.camera=xiaomi
+    ro.hardware.camera=xiaomi \
+    ro.product.mod_device=lmi_global
 
+# MiSys 3.0 needs the block library in the vendor linker namespace.
 PRODUCT_PACKAGES += \
     android.hidl.memory.block@1.0 \
+    android.hidl.memory.block@1.0.vendor \
     android.hidl.memory.token@1.0 \
     android.hidl.memory@1.0-impl \
     android.hidl.token@1.0-utils
