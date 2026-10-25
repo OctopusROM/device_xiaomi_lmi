@@ -1,0 +1,2 @@
+# Map the legacy MiSys name to the common tree's camera persist label.
+typealias vendor_persist_camera_file alias camera_persist_file;
